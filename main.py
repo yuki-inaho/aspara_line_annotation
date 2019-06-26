@@ -34,11 +34,11 @@ for row in range(table.shape[0]):
                 #pseudo_img = cv2.fillPoly(pseudo_img,pts = [points_poly],color =(255,255,255))
         
         if label == 'pole':
-            color = (0,0,255)
+            color = (255,0,0)
         if label == 'aspara_harvest':
             color = (0,255,0)
         if label == 'aspara_parent':
-            color = (255,0,0)
+            color = (0,0,255)
         ann_img = cv2.polylines(ann_img,[points_poly],True,color)
         
     cv2.imwrite("./data/label/%03d.png" %(a), ann_img)
